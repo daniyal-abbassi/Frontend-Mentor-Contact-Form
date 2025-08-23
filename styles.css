@@ -34,7 +34,7 @@ body {
   background-color: hsl(0, 0%, 100%);
   color: hsl(187, 24%, 22%);
   min-width: 46%;
-  height: 70%;
+  height: 75%;
   /* max-height: 80%; */
   margin-top: 8%;
 }
@@ -54,6 +54,9 @@ body {
   display: flex;
   direction: row;
   gap: 1rem;
+}
+.query {
+  margin-top: 1.1rem;
 }
 .first-name-wrapper,
 .last-name-wrapper {
@@ -85,19 +88,62 @@ body {
 }
 .firstname-input:focus,
 .lastname-input:focus,
-.email-input:focus {
+.email-input:focus,.textarea:focus {
   outline: 1.2px solid hsl(169, 82%, 27%);
 }
-.query-wrapper {
+/* .query-wrapper {
   border: 1px solid black;
   width: 50%;
   padding: 0.5rem 0.9rem;
+} */
+.query-wrapper {
+  width: 50%;
+  height: 2.8rem;
+  font-size: 1.2rem;
+  padding: 1rem;
+  color: hsl(187, 24%, 22%);
+  border-radius: 0.4rem;
+  border: 1px solid hsl(186, 15%, 59%);
+  text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
+.query-wrapper:hover,
+.query-wrapper label:hover {
+  cursor: pointer;
+}
+/*NEW THING: accent-color */
+.query-input,.consent-input {
+  accent-color: hsl(169, 82%, 27%);
+}
+/*NEW THING: if some element has some shit*/
+.query-wrapper:has(input:checked) {
+  background-color: hsl(148, 38%, 91%);
+}
+.textarea {
+    font-family: 'Karla';
+  height: 7rem;
+  padding: 1rem;
+  color: hsl(187, 24%, 22%);
+  border-radius: 0.4rem;
+  border: 1px solid hsl(186, 15%, 59%);
+  font-size: 1.25rem;
+}
+
 .consent-input {
   margin-right: 0.5rem;
 }
 .submit-btn {
+  margin-top: 4%;
   width: 100%;
+  border-radius: 0.4rem;
+  background-color: hsl(169, 82%, 27%);
+  color: white;
+  padding: 1rem;
+  font-weight: 700;
+  font-size: large;
+  border: none;
 }
 .error-message {
   margin-top: 0.6rem;
