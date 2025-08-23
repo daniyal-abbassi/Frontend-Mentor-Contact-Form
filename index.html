@@ -31,6 +31,7 @@
               name="firstname"
               class="input-controller firstname-input"
             />
+            <span class="error-message" id="firstname-error">This field is required</span>
           </div>
           <div class="last-name-wrapper">
             <label for="lastname">Last Name</label>
@@ -40,6 +41,7 @@
               name="lastname"
               class="input-controller lastname-input"
             />
+            <span class="error-message" id="lastname-error">This field is required</span>
           </div>
         </div>
 
@@ -53,6 +55,7 @@
             name="email"
             class="input-controller email-input"
           />
+          <span class="error-message" id="email-error">Please enter a valid email address</span>
         </div>
 
         <div class="form-control">
@@ -78,12 +81,14 @@
               />
             </div>
           </div>
+          <span class="error-message" id="query-error">Please select a query type</span>
         </div>
 
         <div class="form-control message">
           <!--ERROR MESSAGE: This field is required-->
           <label for="message">Message</label>
           <textarea name="message" id="message" class="textarea"></textarea>
+          <span class="error-message" id="query-error"> This field is required</span>
         </div>
 
         <div class="form-control consent">
@@ -96,6 +101,7 @@
             class="input-controller consent-input"
           />
           <label for="consent">I consent to being contacted by the team</label>
+          <span class="error-message" id="consent-error"> To submit this form, please consent to being contacted</span>
         </div>
 
         <button type="submit" class="submit-btn" id="submit-btn">Submit</button>
