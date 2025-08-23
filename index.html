@@ -1,52 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Contact form</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Frontend Mentor | Contact form</title>
+  </head>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+  <body>
+    <main class="main-content">
+      <form class="form">
+        <div class="contact-wrapper">
+          <h1>Contact Us</h1>
+        </div>
+        <div class="form-control name-wrapper">
+          <!--ERROR MESSAGE: This field is required-->
+          <div class="first-name-wrapper">
+            <label for="firstname">First Name</label>
+            <input
+              type="text"
+              id="firstname"
+              name="firstname"
+              class="input-controller"
+            />
+          </div>
+          <div class="last-name-wrapper">
+            <label for="lastname">Last Name</label>
+            <input
+              type="text"
+              id="lastname"
+              name="lastname"
+              class="input-controller"
+            />
+          </div>
+        </div>
 
-  Contact Us
+        <div class="form-control email-wrapper">
+          <!--ERROR MESSAGE: Please enter a valid email address
+  This field is required-->
+          <label for="email">Email Address</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            class="input-controller email"
+          />
+        </div>
 
-  First Name
-  This field is required
+        <div class="form-control query-wrapper">
+          <!--ERROR MESSAGE: Please select a query type-->
+          <label
+            >Query Type <label for="query-general">General Enquiry</label
+            ><input
+              type="radio"
+              id="query-general"
+              name="query"
+              class="input-controller query"
+            />
+            <label for="query-support">Support Request</label
+            ><input
+              type="radio"
+              id="query-support"
+              name="query"
+              class="input-controller query"
+            />
+          </label>
+        </div>
 
-  Last Name
-  This field is required
+        <div class="form-control message">
+          <!--ERROR MESSAGE: This field is required-->
+          <label for="message">Message</label>
+          <textarea name="message" id="message" class="textarea"></textarea>
+        </div>
 
-  Email Address
-  Please enter a valid email address
-  This field is required
+        <div class="form-control consent">
+          <!--ERROR MESSAGE:  To submit this form, please consent to being contacted-->
+          <label for="consent">I consent to being contacted by the team</label>
+          <input
+            type="checkbox"
+            id="consent"
+            name="consent"
+            class="input-controller consent"
+          />
+        </div>
 
-  Query Type
-  General Enquiry
-  Support Request
-  Please select a query type
+        <button type="submit" class="submit-btn" id="submit-btn">Submit</button>
+      </form>
 
-  Message
-  This field is required
-
-  I consent to being contacted by the team
-  To submit this form, please consent to being contacted
-
-  Submit
-
-  Message Sent!
-  Thanks for completing the form. We'll be in touch soon!
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+      <!--SUBMIT MESSAGE: Message Sent!
+  Thanks for completing the form. We'll be in touch soon!-->
+    </main>
+  </body>
 </html>
