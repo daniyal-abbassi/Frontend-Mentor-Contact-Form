@@ -1,0 +1,50 @@
+*,*::after,*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.main-content {
+    border: 1px solid black;
+    padding: 1.7rem;
+    border-radius: 1.1rem;
+}
+
+.contact-wrapper {
+    margin-bottom: 1.2rem;
+    text-align: left;
+}
+.form-control {
+    display: block;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+.name-wrapper,.query {
+    display: flex;
+    direction: row;
+    gap: 1rem;
+}
+.first-name-wrapper input,.last-name-wrapper input,.email-wrapper input,.textarea{
+    display: block;
+    margin-top: 0.5rem;
+    width: 100%;
+}
+
+.query-wrapper {
+    border: 1px solid black;
+    width: 50%;
+    padding: 0.5rem 0.9rem;
+}
+.consent-input {
+    margin-right: 0.5rem;
+}
+.submit-btn {
+    width: 100%;
+}

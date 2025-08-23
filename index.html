@@ -51,28 +51,33 @@
             type="email"
             id="email"
             name="email"
-            class="input-controller email"
+            class="input-controller email-input"
           />
         </div>
 
-        <div class="form-control query-wrapper">
+        <div class="form-control">
           <!--ERROR MESSAGE: Please select a query type-->
-          <label
-            >Query Type <label for="query-general">General Enquiry</label
+          <label>Query Type </label>
+          <div class="query">
+            <div class="query-wrapper">
+              <label for="query-general">General Enquiry</label
             ><input
               type="radio"
               id="query-general"
               name="query"
-              class="input-controller query"
-            />
+              class="input-controller query-input"
+              />
+            </div>
+          <div class="query-wrapper">
             <label for="query-support">Support Request</label
             ><input
               type="radio"
               id="query-support"
               name="query"
-              class="input-controller query"
-            />
-          </label>
+              class="input-controller query-input"
+              />
+            </div>
+          </div>
         </div>
 
         <div class="form-control message">
@@ -83,13 +88,14 @@
 
         <div class="form-control consent">
           <!--ERROR MESSAGE:  To submit this form, please consent to being contacted-->
-          <label for="consent">I consent to being contacted by the team</label>
+          
           <input
             type="checkbox"
             id="consent"
             name="consent"
-            class="input-controller consent"
+            class="input-controller consent-input"
           />
+          <label for="consent">I consent to being contacted by the team</label>
         </div>
 
         <button type="submit" class="submit-btn" id="submit-btn">Submit</button>
