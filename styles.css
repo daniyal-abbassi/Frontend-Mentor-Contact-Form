@@ -35,7 +35,8 @@ body {
   color: hsl(187, 24%, 22%);
   min-width: 46%;
   height: 70%;
-  margin-top: 9%;
+  /* max-height: 80%; */
+  margin-top: 8%;
 }
 
 .contact-wrapper {
@@ -97,4 +98,16 @@ body {
 }
 .submit-btn {
   width: 100%;
+}
+.error-message {
+  margin-top: 0.6rem;
+  display: block;
+  color: hsl(0, 66%, 54%);
+  display: none;
+}
+/* NEW THING TO LEARN: :user-invalid */
+.firstname-input:user-invalid,
+.lastname-input:user-invalid,
+.email-input:user-invalid {
+  border-color: hsl(0, 66%, 54%);
 }

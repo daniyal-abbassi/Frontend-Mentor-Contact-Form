@@ -26,22 +26,29 @@
           <div class="first-name-wrapper">
             <label for="firstname">First Name</label>
             <input
+              required
               type="text"
               id="firstname"
               name="firstname"
               class="input-controller firstname-input"
+              
             />
-            <span class="error-message" id="firstname-error">This field is required</span>
+            <span class="error-message" id="firstname-error"
+              >This field is required</span
+            >
           </div>
           <div class="last-name-wrapper">
             <label for="lastname">Last Name</label>
             <input
+            required
               type="text"
               id="lastname"
               name="lastname"
               class="input-controller lastname-input"
             />
-            <span class="error-message" id="lastname-error">This field is required</span>
+            <span class="error-message" id="lastname-error"
+              >This field is required</span
+            >
           </div>
         </div>
 
@@ -50,12 +57,15 @@
   This field is required-->
           <label for="email">Email Address</label>
           <input
+          required
             type="email"
             id="email"
             name="email"
             class="input-controller email-input"
           />
-          <span class="error-message" id="email-error">Please enter a valid email address</span>
+          <span class="error-message" id="email-error"
+            >Please enter a valid email address</span
+          >
         </div>
 
         <div class="form-control">
@@ -64,44 +74,51 @@
           <div class="query">
             <div class="query-wrapper">
               <label for="query-general">General Enquiry</label
-            ><input
-              type="radio"
-              id="query-general"
-              name="query"
-              class="input-controller query-input"
+              ><input
+                type="radio"
+                id="query-general"
+                name="query"
+                class="input-controller query-input"
               />
             </div>
-          <div class="query-wrapper">
-            <label for="query-support">Support Request</label
-            ><input
-              type="radio"
-              id="query-support"
-              name="query"
-              class="input-controller query-input"
+            <div class="query-wrapper">
+              <label for="query-support">Support Request</label
+              ><input
+                type="radio"
+                id="query-support"
+                name="query"
+                class="input-controller query-input"
               />
             </div>
           </div>
-          <span class="error-message" id="query-error">Please select a query type</span>
+          <span class="error-message" id="query-error"
+            >Please select a query type</span
+          >
         </div>
 
         <div class="form-control message">
           <!--ERROR MESSAGE: This field is required-->
           <label for="message">Message</label>
-          <textarea name="message" id="message" class="textarea"></textarea>
-          <span class="error-message" id="query-error"> This field is required</span>
+          <textarea required name="message" id="message" class="textarea"></textarea>
+          <span class="error-message" id="query-error">
+            This field is required</span
+          >
         </div>
 
         <div class="form-control consent">
           <!--ERROR MESSAGE:  To submit this form, please consent to being contacted-->
-          
+
           <input
+          required
             type="checkbox"
             id="consent"
             name="consent"
             class="input-controller consent-input"
           />
           <label for="consent">I consent to being contacted by the team</label>
-          <span class="error-message" id="consent-error"> To submit this form, please consent to being contacted</span>
+          <span class="error-message" id="consent-error">
+            To submit this form, please consent to being contacted</span
+          >
         </div>
 
         <button type="submit" class="submit-btn" id="submit-btn">Submit</button>
@@ -110,5 +127,6 @@
       <!--SUBMIT MESSAGE: Message Sent!
   Thanks for completing the form. We'll be in touch soon!-->
     </main>
+    <script src="script.js"></script>
   </body>
 </html>
