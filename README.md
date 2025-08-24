@@ -35,7 +35,7 @@ This project uses Vue's Composition API to manage all form state and logic.
   ```js
     <span v-if="formErrors.firstname">{{ formErrors.firstname }}</span>
   ```
-  
+
 ### 🚀 Setup
 
 1.  **Download/Clone:** Get the project files.
@@ -50,5 +50,5 @@ This project uses Vue's Composition API to manage all form state and logic.
   ├── index.html      # Main HTML file with form structure
   ├── script.js       # All Vue application logic
   ├── styles.css      # All custom CSS
-  └── assets/         # Images and other static assets
+  
 ```
