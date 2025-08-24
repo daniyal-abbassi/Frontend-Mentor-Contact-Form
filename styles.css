@@ -183,7 +183,7 @@ form {
   margin-top: 0.6rem;
   display: block;
   color: hsl(0, 66%, 54%);
-  display: none;
+  /* display: none; */
 }
 /* NEW THING TO LEARN: :user-invalid */
 .firstname-input:user-invalid,

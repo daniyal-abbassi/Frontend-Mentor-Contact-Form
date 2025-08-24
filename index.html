@@ -35,9 +35,11 @@
               id="firstname"
               name="firstname"
               class="input-controller firstname-input"
+              v-model="formData.firstname"
+              @blur="validateFirstName"
             />
             <span class="error-message" id="firstname-error"
-              >This field is required</span
+              >{{formErrors.firstname}}</span
             >
           </div>
           <div class="last-name-wrapper">
@@ -48,9 +50,11 @@
               id="lastname"
               name="lastname"
               class="input-controller lastname-input"
+              v-model="formData.lastname"
+              @blur="validateLastName"
             />
             <span class="error-message" id="lastname-error"
-              >This field is required</span
+              >{{formErrors.lastname}}</span
             >
           </div>
         </div>
@@ -65,9 +69,12 @@
             id="email"
             name="email"
             class="input-controller email-input"
+           
+            v-model="formData.email"
+            @blur="validateEmail"
           />
           <span class="error-message" id="email-error"
-            >Please enter a valid email address</span
+            >{{formErrors.email}}</span
           >
         </div>
 
@@ -81,6 +88,8 @@
                 id="query-general"
                 name="query"
                 class="input-controller query-input"
+                v-model="formData.query"
+                @blur="validateQuery"
               /><label for="query-general">General Enquiry</label>
             </div>
             <div class="query-wrapper">
@@ -89,11 +98,13 @@
                 id="query-support"
                 name="query"
                 class="input-controller query-input"
+                 v-model="formData.query"
+                @blur="validateQuery"
               /><label for="query-support">Support Request</label>
             </div>
           </div>
           <span class="error-message" id="query-error"
-            >Please select a query type</span
+            >{{formErrors.query}}</span
           >
         </div>
 
@@ -105,9 +116,11 @@
             name="message"
             id="message"
             class="textarea"
+            v-model="formData.message"
+            @blur="validateMessage"
           ></textarea>
           <span class="error-message" id="message-error">
-            This field is required</span
+            {{formErrors.message}}</span
           >
         </div>
 
@@ -120,10 +133,12 @@
             id="consent"
             name="consent"
             class="input-controller consent-input"
+            v-model="formData.consent"
+            @blur="validateConsent"
           />
           <label for="consent" class="required">I consent to being contacted by the team</label>
           <span class="error-message" id="consent-error">
-            To submit this form, please consent to being contacted</span
+            {{formErrors.consent}}</span
           >
         </div>
 
@@ -134,7 +149,7 @@
   Thanks for completing the form. We'll be in touch soon!-->
     </main>
         
-        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+        <script src="js/vue.global.js"></script>
         <script type="module" src="script-vue.js"></script>
     </body>
 </html>
