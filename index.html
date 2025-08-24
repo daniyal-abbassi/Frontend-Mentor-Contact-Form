@@ -24,7 +24,7 @@
         <div class="form-control name-wrapper">
           <!--ERROR MESSAGE: This field is required-->
           <div class="first-name-wrapper">
-            <label for="firstname">First Name</label>
+            <label for="firstname" class="required">First Name</label>
             <input
               required
               type="text"
@@ -37,7 +37,7 @@
             >
           </div>
           <div class="last-name-wrapper">
-            <label for="lastname">Last Name</label>
+            <label for="lastname" class="required">Last Name</label>
             <input
               required
               type="text"
@@ -54,7 +54,7 @@
         <div class="form-control email-wrapper">
           <!--ERROR MESSAGE: Please enter a valid email address
   This field is required-->
-          <label for="email">Email Address</label>
+          <label for="email" class="required">Email Address</label>
           <input
             required
             type="email"
@@ -69,7 +69,7 @@
 
         <div class="form-control">
           <!--ERROR MESSAGE: Please select a query type-->
-          <label>Query Type </label>
+          <label class="required">Query Type </label>
           <div class="query">
             <div class="query-wrapper">
               <input
@@ -95,7 +95,7 @@
 
         <div class="form-control message">
           <!--ERROR MESSAGE: This field is required-->
-          <label for="message">Message</label>
+          <label for="message" class="required">Message</label>
           <textarea
             required
             name="message"
@@ -117,7 +117,7 @@
             name="consent"
             class="input-controller consent-input"
           />
-          <label for="consent">I consent to being contacted by the team</label>
+          <label for="consent" class="required">I consent to being contacted by the team</label>
           <span class="error-message" id="consent-error">
             To submit this form, please consent to being contacted</span
           >

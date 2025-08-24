@@ -14,7 +14,8 @@ const lastnameError = document.getElementById("lastname-error");
 const submitBtn = document.getElementById("submit-btn");
 
 //delete error message when type in firstname
-firstNameInput.addEventListener("change", () => {
+firstNameInput.addEventListener("change", (e) => {
+   
   if (firstNameInput.value) {
     firstnameError.style.display = "none";
   }

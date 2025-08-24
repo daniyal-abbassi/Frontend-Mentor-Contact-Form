@@ -27,16 +27,16 @@ body {
   background-color: hsl(148, 38%, 91%);
 }
 
-.main-content {
+form {
   border: none;
   padding: 1.9rem;
   border-radius: 0.8rem;
   background-color: hsl(0, 0%, 100%);
   color: hsl(187, 24%, 22%);
   min-width: 46%;
-  height: 75%;
+  /* height: 75%; */
   /* max-height: 80%; */
-  margin-top: 8%;
+  margin-top: 15%;
 }
 
 .contact-wrapper {
@@ -145,6 +145,9 @@ body {
   font-size: large;
   border: none;
 }
+.submit-btn:hover, .consent label:hover {
+    cursor: pointer;
+}
 .error-message {
   margin-top: 0.6rem;
   display: block;
@@ -156,4 +159,10 @@ body {
 .lastname-input:user-invalid,
 .email-input:user-invalid {
   border-color: hsl(0, 66%, 54%);
+}
+
+label.required::after {
+    content: "*";
+    margin-left: 8px;
+    color: hsl(169, 82%, 27%);
 }
