@@ -1,25 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
-
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./assets/images/favicon-32x32.png"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+           <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css" />
-    <title>Frontend Mentor | Contact form</title>
-  </head>
-
-  <body>
-    <main class="main-content">
+ 
+        <link rel="stylesheet" href="styles.css">
+        <title>Contact Form - Vue</title>
+    </head>
+    <body>
+        <main class="main-content" id="app">
       <div class="success-message" id="success-message">
         <div>
           <img class="sent-icon" src="../assets/images/icon-success-check.svg" alt="success-checkmark"></span>
@@ -141,6 +133,8 @@
       <!--SUBMIT MESSAGE: Message Sent!
   Thanks for completing the form. We'll be in touch soon!-->
     </main>
-    <script src="script.js"></script>
-  </body>
+        
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+        <script type="module" src="script-vue.js"></script>
+    </body>
 </html>
