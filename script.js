@@ -12,10 +12,17 @@ const emailError = document.getElementById("email-error");
 const firstnameError = document.getElementById("firstname-error");
 const lastnameError = document.getElementById("lastname-error");
 const submitBtn = document.getElementById("submit-btn");
+const successToast = document.getElementById("success-message");
+const form = document.getElementById('form');
 
+//timeout for toast
+let toastTimeout;
+
+form.addEventListener('submit',(e)=>{
+  e.preventDefault();
+})
 //delete error message when type in firstname
 firstNameInput.addEventListener("change", (e) => {
-   
   if (firstNameInput.value) {
     firstnameError.style.display = "none";
   }
@@ -66,5 +73,20 @@ submitBtn.addEventListener("click", () => {
   }
   if (!Array.from(queryInputs).some((q) => q.checked)) {
     queryError.style.display = "block";
+  }
+   
+  if (
+    firstNameInput.value &&
+    lastNameInput.value &&
+    emailInput.value &&
+    messageInput.value &&
+    consentInput.checked &&
+    Array.from(queryInputs).some((q) => q.checked)
+  ) {
+    clearInterval(toastTimeout);
+    successToast.style.display = 'flex';
+    toastTimeout = setTimeout(()=>{
+      successToast.style.display = 'none';
+    },2000)
   }
 });
