@@ -1,80 +1,49 @@
-# Frontend Mentor - Contact form solution
+## Vue 3 Contact Form (CDN Version)
 
-This is a solution to the [Contact form challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/contact-form--G-hYlqKJj).
-
-## Table of contents
-
-- [Overview](#overview)
-  - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
-  - [Links](#links)
-- [My process](#my-process)
-  - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
+A simple contact form built with HTML/CSS and progressively enhanced with **Vue 3**. This project demonstrates using Vue's **Composition API** directly in an HTML file without a build step.
 
 
 
-## Overview
+### ✨ Features & Tech
 
-### The challenge
+-    **Features:** Reactive form state, real-time validation, and conditional error/success messages.
+-    **Tech Stack:** HTML5, CSS3, JavaScript, and **Vue 3** (via CDN).
 
-Users should be able to:
+### 💡 Vue Implementation
 
-- Complete the form and see a success toast message.
-- Receive form validation messages if:
-  - A required field has been missed
-  - The email address is not formatted correctly
-- Complete the form only using their keyboard.
-- Have inputs, error messages, and the success message announced on their **screen reader**
-- View the optimal layout for the interface depending on their device's screen size
-- See hover and focus states for all interactive elements on the page
+This project uses Vue's Composition API to manage all form state and logic.
+**Core Concepts Used:**
+1.  **State Management (`reactive`)**: A single `reactive` object holds the entire form's state, and a second one holds validation errors.
+    ```js
+    const formData = reactive({ firstname: "", ... });
+    const formErrors = reactive({ firstname: "", ... });
+  ```
+2.  **Two-Way Data Binding (`v-model`)**: Creates a direct, two-way link between HTML inputs and the `formData` object, eliminating manual DOM updates.
+    ```js
+    <input type="text" v-model="formData.firstname">
+  ```
+3.  Event Handling (`@blur`, `@submit`, `@change`): Triggers validation logic on user interaction. `@submit.prevent` handles form submission without a page reload.
+    ```js
+    <input @blur="validateFirstName">
+    <form @submit.prevent="submitForm">
+  ```
+    **Conditional Rendering (`v-if`)**: Shows or hides error and success messages based on the application's current state.
+  ```js
+    <span v-if="formErrors.firstname">{{ formErrors.firstname }}</span>
+  ```
+### 🚀 Setup
 
-### Screenshot
+1.  **Download/Clone:** Get the project files.
 
-![Contact Form](./screenshots/contact-form.png)
-![Mobile view](./screenshots/form-cotact-mobile-view.png)
-![Toast Message](./screenshots/toast-contact-form.png)
+2. **Open in Browser:** Open `index.html` directly in your web browser.
 
+3.  **(Optional) Offline Use:** Download `vue.global.js` and update the `<script>` path in `index.html` to use the local file.
 
-
-### Links
-
-- Solution URL: [Add solution URL here](https://www.frontendmentor.io/solutions/html-css-s2bs4wfHML)
-- Live Site URL: [Contact Form](https://daniyal-abbassi.github.io/Frontend-Mentor-Contact-Form/)
-
-## My process
-
-### Built with
-
-- Semantic **HTML5** markup
-- **CSS** custom properties
-- Flexbox
-
-
-
-### What I learned 
-
-I learned and re-use some cool CSS properties: 
-``@font-face``, ``accent-color``, ``:has()``, ``:user-invalid``
-
-```css
-/*When you want to use local font */
-@font-face {
-  font-family: 'customName';
-  src: url('./example') format('type');
-}
-/*for changing radio and checkbox colors */
-input {
-  accent-color: #000000 
-}
-/* When you wanna change an element's style **if** some condition is met.
-like when an input is checked */
-.element:has(input:checked) {
-  background-color: red;
-}
-/*if an input is invalid or empty */
-input:user-invalid {
-  border: red;
-}
+### 📂 File Structure
+  ```
+  .
+  ├── index.html      # Main HTML file with form structure
+  ├── script.js       # All Vue application logic
+  ├── styles.css      # All custom CSS
+  └── assets/         # Images and other static assets
 ```
-
