@@ -21,7 +21,7 @@
           <p>Thanks for completing the form. We'll be in touch soon!</p>
         </div>
       </div>
-      <form class="form" id="form">
+      <form class="form" id="form" v-on:submit.prevent>
         <div class="contact-wrapper">
           <h1>Contact Us</h1>
         </div>
@@ -134,7 +134,7 @@
             name="consent"
             class="input-controller consent-input"
             v-model="formData.consent"
-            @blur="validateConsent"
+            @change="validateConsent"
           />
           <label for="consent" class="required">I consent to being contacted by the team</label>
           <span class="error-message" id="consent-error">

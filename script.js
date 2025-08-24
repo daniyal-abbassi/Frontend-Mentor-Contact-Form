@@ -44,22 +44,23 @@ createApp({
       }
     }
     function validateQuery() {
-          if (formData.query.trim().length === 0) {
+      if (formData.query.trim().length === 0) {
         formErrors.query = "Please select a query type";
       } else {
         formErrors.query = "";
       }
     }
-        function validateMessage() {
-          if (formData.message.trim().length === 0) {
+    function validateMessage() {
+      if (formData.message.trim().length === 0) {
         formErrors.message = "This field is required";
       } else {
         formErrors.message = "";
       }
     }
-        function validateConsent() {
-          if (formData.consent.trim().length === 0) {
-        formErrors.consent = "To submit this form, please consent to being contacted";
+    function validateConsent() {
+      if (!formData.consent) {
+        formErrors.consent =
+          "To submit this form, please consent to being contacted";
       } else {
         formErrors.consent = "";
       }
