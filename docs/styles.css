@@ -19,7 +19,7 @@
 }
 
 body {
-  font-family: "Karla";
+  font-family: "Karla", sans-serif;
   display: flex;
   justify-content: center;
   height: 100vh;
@@ -152,7 +152,7 @@ form {
   background-color: hsl(148, 38%, 91%);
 }
 .textarea {
-  font-family: "Karla";
+  font-family: "Karla", sans-serif;
   height: 7rem;
   padding: 1rem;
   color: hsl(187, 24%, 22%);
