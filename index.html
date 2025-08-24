@@ -12,7 +12,7 @@
     </head>
     <body>
         <main class="main-content" id="app">
-      <div class="success-message" id="success-message">
+      <div class="success-message" id="success-message" v-if="successMessage">
         <div>
           <img class="sent-icon" src="../assets/images/icon-success-check.svg" alt="success-checkmark"></span>
           <span class="sent-text">Message Sent!
@@ -21,7 +21,7 @@
           <p>Thanks for completing the form. We'll be in touch soon!</p>
         </div>
       </div>
-      <form class="form" id="form" v-on:submit.prevent>
+      <form class="form" id="form" @submit.prevent="submitForm">
         <div class="contact-wrapper">
           <h1>Contact Us</h1>
         </div>
@@ -88,6 +88,7 @@
                 id="query-general"
                 name="query"
                 class="input-controller query-input"
+                value="General Enquiry"
                 v-model="formData.query"
                 @blur="validateQuery"
               /><label for="query-general">General Enquiry</label>
@@ -98,6 +99,7 @@
                 id="query-support"
                 name="query"
                 class="input-controller query-input"
+                value="Support Request"
                  v-model="formData.query"
                 @blur="validateQuery"
               /><label for="query-support">Support Request</label>

@@ -39,7 +39,7 @@ main {
   color: hsl(148, 38%, 91%);
   padding: 1.3rem;
   border-radius: 0.6rem;
-  display: none;
+  display: flex;
   flex-direction: column;
   gap: 1rem;
   position: absolute;

@@ -1,7 +1,9 @@
-const { createApp, ref, reactive, onMounted } = Vue;
+const { createApp, ref, reactive, onMounted, computed} = Vue;
 
 createApp({
   setup() {
+    //successMessage 
+    const successMessage = ref(false);
     //form inputs
     const formData = reactive({
       firstname: "",
@@ -37,7 +39,10 @@ createApp({
       }
     }
     function validateEmail() {
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       if (formData.email.trim().length === 0) {
+        formErrors.email = "This field is required";
+      } else if(!emailRegex.test(formData.email)) {
         formErrors.email = "Please enter a valid email address";
       } else {
         formErrors.email = "";
@@ -65,6 +70,36 @@ createApp({
         formErrors.consent = "";
       }
     }
+    const isFormValid = computed(()=>{
+       return formData.firstname && 
+         formData.lastname && 
+         formData.email && 
+         formData.query && 
+         formData.message && 
+         formData.consent &&
+         !formErrors.firstname &&
+         !formErrors.lastname &&
+         !formErrors.email &&
+         !formErrors.query &&
+         !formErrors.message &&
+         !formErrors.consent;
+    })
+    function submitForm() {
+      validateFirstName();
+      validateLastName();
+      validateEmail();
+      validateQuery();
+      validateMessage();
+      validateConsent();
+      if(!isFormValid.value) {
+        console.log('Form is invalid!')
+        return
+      }
+      successMessage.value = true;
+      setTimeout(()=>{
+        successMessage.value = false
+      },2000)
+    }
     
     return {
       formData,
@@ -75,6 +110,9 @@ createApp({
       validateMessage,
       validateConsent,
       formErrors,
+      successMessage,
+      submitForm,
+      isFormValid
     };
   },
 }).mount("#app");
