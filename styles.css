@@ -88,7 +88,8 @@ form {
 }
 .firstname-input:focus,
 .lastname-input:focus,
-.email-input:focus,.textarea:focus {
+.email-input:focus,
+.textarea:focus {
   outline: 1.2px solid hsl(169, 82%, 27%);
 }
 /* .query-wrapper {
@@ -114,7 +115,8 @@ form {
   cursor: pointer;
 }
 /*NEW THING: accent-color */
-.query-input,.consent-input {
+.query-input,
+.consent-input {
   accent-color: hsl(169, 82%, 27%);
 }
 /*NEW THING: if some element has some shit*/
@@ -122,7 +124,7 @@ form {
   background-color: hsl(148, 38%, 91%);
 }
 .textarea {
-    font-family: 'Karla';
+  font-family: "Karla";
   height: 7rem;
   padding: 1rem;
   color: hsl(187, 24%, 22%);
@@ -145,8 +147,9 @@ form {
   font-size: large;
   border: none;
 }
-.submit-btn:hover, .consent label:hover {
-    cursor: pointer;
+.submit-btn:hover,
+.consent label:hover {
+  cursor: pointer;
 }
 .error-message {
   margin-top: 0.6rem;
@@ -157,12 +160,38 @@ form {
 /* NEW THING TO LEARN: :user-invalid */
 .firstname-input:user-invalid,
 .lastname-input:user-invalid,
-.email-input:user-invalid {
+.email-input:user-invalid,.textarea:user-invalid {
   border-color: hsl(0, 66%, 54%);
 }
 
 label.required::after {
-    content: "*";
-    margin-left: 8px;
-    color: hsl(169, 82%, 27%);
+  content: "*";
+  margin-left: 8px;
+  color: hsl(169, 82%, 27%);
+}
+
+/*for mobile */
+
+@media (max-width: 550px) {
+  form {
+    margin-right: 5%;
+    margin-left: 5%;
+  }
+    .form-control {
+    display: block;
+  }
+    .name-wrapper,
+  .query {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .first-name-wrapper,
+.last-name-wrapper {
+  width: 100%;
+}
+.query-wrapper {
+  width: 100%;
+  
+}
 }
